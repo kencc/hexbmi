@@ -1,0 +1,275 @@
+$golden: #FFD366;
+$dark: #424242;
+$good: #86D73F;
+$short: #31BAF9;
+$warning: #FF982D;
+$fat: #FF6C03;
+$danger: #FF1200;
+
+.header {
+  background-color: $dark;
+  label {
+    color: $golden;
+    font-size: 1.125rem;
+  }
+  .form-control {
+    border: 2px solid $golden;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    background: rgba(255,255,255,.1);
+    color: rgba(255,255,255,.8);
+  }
+}
+.btn-calc {
+  background: $golden;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 18px;
+  cursor: pointer;
+  &:hover {
+    background: #FFD366;
+    box-shadow: 0 1px 6px 3px rgba(255,196,50,0.64);
+    transition: 0.3s;
+  }
+  .btn-calc-text {
+    font-size: 1.5rem;
+    color: $dark;
+  }
+}
+.btn-result {
+  display: flex;
+  align-items: center;
+  position: relative;
+  .btn-bmi-info {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 6px solid $good;
+    margin-right: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $dark;
+  }
+  .btn-bmi-val {
+    color: $good;
+    font-size: 1.5rem;
+  }
+  .btn-bmi-label {
+    color: $good;
+    font-size: 14px;
+  }
+  .btn-reflash {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 3px solid $dark;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $good;
+  }
+  .bmi-msg {
+    position: absolute;
+    top:50%;
+    right: -128px;
+    color: $good;
+    font-size: 2rem;
+    transform: translateY(-24px);
+    min-width: 128px;
+  }
+}
+.btn-theme-bmi-good {
+  .btn-bmi-info {
+    border: 6px solid $good;
+  }
+  .btn-bmi-val {
+    color: $good;
+  }
+  .btn-bmi-label {
+    color: $good;
+  }
+  .btn-reflash {
+    background-color: $good;
+  }
+  .bmi-msg {
+    color: $good;
+  }
+}
+.btn-theme-bmi-short {
+  .btn-bmi-info {
+    border: 6px solid $short;
+  }
+  .btn-bmi-val {
+    color: $short;
+  }
+  .btn-bmi-label {
+    color: $short;
+  }
+  .btn-reflash {
+    background-color: $short;
+  }
+  .bmi-msg {
+    color: $short;
+  }
+}
+.btn-theme-bmi-warning {
+  .btn-bmi-info {
+    border: 6px solid $warning;
+  }
+  .btn-bmi-val {
+    color: $warning;
+  }
+  .btn-bmi-label {
+    color: $warning;
+  }
+  .btn-reflash {
+    background-color: $warning;
+  }
+  .bmi-msg {
+    color: $warning;
+  }
+}
+.btn-theme-bmi-fat {
+  .btn-bmi-info {
+    border: 6px solid $fat;
+  }
+  .btn-bmi-val {
+    color: $fat;
+  }
+  .btn-bmi-label {
+    color: $fat;
+  }
+  .btn-reflash {
+    background-color: $fat;
+  }
+  .bmi-msg {
+    color: $fat;
+  }
+}
+.btn-theme-bmi-danger {
+  .btn-bmi-info {
+    border: 6px solid $danger;
+  }
+  .btn-bmi-val {
+    color: $danger;
+  }
+  .btn-bmi-label {
+    color: $danger;
+  }
+  .btn-reflash {
+    background-color: $danger;
+  }
+  .bmi-msg {
+    color: $danger;
+  }
+}
+
+.BMI {
+  min-height: 55vh;
+  h2 {
+    font-size: 1.5rem;
+    color: $dark;
+    font-weight: normal;
+  }
+}
+.footer {
+  background-color: $golden;
+}
+.bmi-logo-m {
+  height: 55px;
+  width: 55px;
+  filter: invert(100%) saturate(0%);
+}
+.bmi-logo-l {
+  height: 117px;
+  width: 117px;
+}
+.bg-cover {
+  background-position: center center;
+  background-size: cover;
+}
+.bmi-card {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  background-color: #fff;
+  .bmi-item {
+    min-width: 100px;
+    padding: 20px 10px;
+  }
+  span {
+    font-size: 12px;
+    margin-right: 5px;
+  }
+  .bmi-delete {
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background-color: rgba(0,0,0,.8);
+    color: #fff;
+    text-align: center;
+    line-height: 70px;
+    opacity: 0;
+  }
+  &:hover {
+    .bmi-delete {
+      opacity: 1;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+  }
+}
+.bmi-good {
+  &::before {
+    content:"";
+    width: 10px;
+    background: #86D73F;
+    box-shadow: 2px 0 3px 0 rgba(134,215,63,0.29);
+  }
+}
+.bmi-short {
+  &::before {
+    content:"";
+    width: 10px;
+    background: #31BAF9;
+    box-shadow: 2px 0 3px 0 rgba(49,186,249,0.29);
+  }
+}
+.bmi-warning {
+  &::before {
+    content:"";
+    width: 10px;
+    background: #FF982D;
+    box-shadow: 2px 0 3px 0 rgba(255,152,45,0.29);
+  }
+}
+.bmi-danger {
+  &::before {
+    content:"";
+    width: 10px;
+    background: #FF1200;
+    box-shadow: 2px 0 3px 0 rgba(255,18,0,0.29);
+  }
+}
+.bmi-fat {
+  &::before {
+    content:"";
+    width: 10px;
+    background: #FF6C03;
+    box-shadow: 2px 0 3px 0 rgba(255,108,3,0.29);
+  }
+}

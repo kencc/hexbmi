@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BMI 計算器</title>
+  <link rel="stylesheet" href="./dist/bundle.css">
+</head>
+<body>
+  <header class="header p-5">
+    <div class="container d-flex align-items-center justify-content-center">
+      <h1 class="bmi-logo-l text-hide" style="background-image: url(./images/BMICLogo.png)">BMI calculator</h1>
+      <div class="form px-5">
+        <div class="form-group">
+          <label for="myHeight">身高 cm</label>
+          <input type="number" class="form-control" placeholder="請輸入身高" id="myHeight" value="">
+        </div>
+        <div class="form-group">
+          <label for="myWeight">體重 kg</label>
+          <input type="number" class="form-control" placeholder="請輸入體重" id="myWeight" value="">
+        </div>
+      </div>
+      <div class="data-send">
+        <div class="btn-calc">
+          <div class="btn-calc-text">看結果</div>
+        </div>
+        <!-- <div class="btn-result btn-theme-bmi-good">
+          <div class="btn-bmi-info">
+            <div class="btn-bmi-val">26.87</div>
+            <div class="btn-bmi-label">BMI</div>
+            <div class="btn-reflash"><img src="./images/icons_loop.png" alt="reflash"></div>
+          </div>
+          <div class="bmi-msg">理想</div>
+        </div> -->
+      </div>
+    </div>
+  </header>
+  <section class="BMI py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">BMI 紀錄</h2>
+      <div class="row justify-content-center">
+        <div class="col-8">
+          <div class="bmi-records">
+            <div class="bmi-card bmi-good">
+              <div class="bmi-item">理想</div>
+              <div class="bmi-item"><span>BMI</span>20.90</div>
+              <div class="bmi-item"><span>weight</span>70kg</div>
+              <div class="bmi-item"><span>height</span>180cm</div>
+              <div class="bmi-item"><span>06-19-2017</span></div>
+              <div class="bmi-delete">刪除</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer py-3 d-flex justify-content-center">
+    <div class="bmi-logo-m bg-cover" style="background-image: url(./images/BMICLogo.png)"></div>
+  </footer>
+
+  <script src="./dist/bundle.js"></script>
+  <script src="all.js"></script>
+</body>
+</html>
