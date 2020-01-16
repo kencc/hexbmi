@@ -4,7 +4,7 @@
 
 * 網頁：https://kencc.github.io/hexbmi/
 * 原始碼：https://github.com/kencc/hexbmi/
-* 設計稿：
+* 設計稿：https://hexschool.github.io/JavaScript_HomeWork/
 
 # 內容
 * JavaScript 沒有編譯，請使用目錄下的 all.js
